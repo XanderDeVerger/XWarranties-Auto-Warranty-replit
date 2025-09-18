@@ -1,1 +1,14 @@
+[build]
+  base = "LinguaLeap"
+  command = "npm run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# SPA routing (React/Vite)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
